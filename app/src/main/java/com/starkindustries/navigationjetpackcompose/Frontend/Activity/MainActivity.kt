@@ -6,11 +6,13 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.BottomNavigation
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.starkindustries.navigationjetpackcompose.Frontend.Screens.SplashScreen.Compose.SplashScreenNavigation
 import com.starkindustries.navigationjetpackcompose.Navigation.Navigation
 import com.starkindustries.navigationjetpackcompose.ui.theme.NavigationJetpackComposeTheme
 
@@ -20,7 +22,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             NavigationJetpackComposeTheme {
-                Navigation()
+                SplashScreenNavigation()
             }
         }
     }
@@ -30,8 +32,7 @@ class MainActivity : ComponentActivity() {
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
         text = "Hello $name!",
-        modifier = modifier
-    )
+        modifier = modifier)
 }
 
 @Preview(showBackground = true)
